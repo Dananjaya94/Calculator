@@ -5,6 +5,7 @@
  */
 package calculator;
 
+import java.awt.Dimension;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -200,7 +201,7 @@ public class CalculatorMain extends javax.swing.JFrame {
         getContentPane().add(two, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 80, 80));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Number Two Label");
+        jLabel1.setText("Number Two");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
 
         numbertwolabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -208,7 +209,7 @@ public class CalculatorMain extends javax.swing.JFrame {
         getContentPane().add(numbertwolabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setText("Number One Label");
+        jLabel3.setText("Number One");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, -1, -1));
 
         numberonelabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -368,7 +369,13 @@ public class CalculatorMain extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CalculatorMain().setVisible(true);
+//                new CalculatorMain().setVisible(true);
+                   CalculatorMain clmain = new CalculatorMain();
+                   
+                clmain.setPreferredSize(new Dimension(590, 600));
+                clmain.pack();
+                clmain.setLocationRelativeTo(null);
+                clmain.setVisible(true);
             }
         });
     }
